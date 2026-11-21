@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #0f172a, #1e1b4b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container{
+    background-color: grey;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px black;
+    width: 340px;
+    padding: 25px;
+}
+
+.display-screen{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+.previous-operand{
+    color: grey;
+    font-size: 1rem;
+    min-height: 20px;
+}
+
+.current-operand{
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.keypad{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn{
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2 ease;
+}
+
+.btn:hover{
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn:active{
+    transform: translateY(0);
+}
+
+
+.btn.function{
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.btn.function:hover{
+    background: rgba(239, 68, 68, 0.25);
+}
+
+.btn.operator{
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.btn.operator:hover{
+    background: rgba(59, 130, 246, 0.25);
+}
+
+.btn.equals{
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    border: none;
+}
+
+.btn.equals:hover{
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.btn.zero{
+    grid-column: span 2;
+}
